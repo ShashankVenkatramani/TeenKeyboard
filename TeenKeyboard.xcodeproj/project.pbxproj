@@ -13,7 +13,36 @@
 		D56AEBC820831497001926A9 /* TeenKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D56AEBC620831497001926A9 /* TeenKeyboard.xcdatamodeld */; };
 		D56AEBCA20831498001926A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D56AEBC920831498001926A9 /* Assets.xcassets */; };
 		D56AEBCD20831498001926A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56AEBCB20831498001926A9 /* LaunchScreen.storyboard */; };
+		D56AEBDB20831520001926A9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56AEBDA20831520001926A9 /* KeyboardViewController.swift */; };
+		D56AEBDF20831520001926A9 /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D56AEBD820831520001926A9 /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D56AEBE520831561001926A9 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D56AEBE420831561001926A9 /* KeyboardView.xib */; };
+		D56AEBE720833D8E001926A9 /* SentimentPolarity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D56AEBE620833D8D001926A9 /* SentimentPolarity.mlmodel */; };
+		D56AEBE820833D8E001926A9 /* SentimentPolarity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D56AEBE620833D8D001926A9 /* SentimentPolarity.mlmodel */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D56AEBDD20831520001926A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D56AEBB420831497001926A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56AEBD720831520001926A9;
+			remoteInfo = Keyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D56AEBE320831520001926A9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D56AEBDF20831520001926A9 /* Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D56AEBBC20831497001926A9 /* TeenKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeenKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +53,22 @@
 		D56AEBC920831498001926A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D56AEBCC20831498001926A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D56AEBCE20831498001926A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56AEBD820831520001926A9 /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56AEBDA20831520001926A9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D56AEBDC20831520001926A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56AEBE420831561001926A9 /* KeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		D56AEBE620833D8D001926A9 /* SentimentPolarity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentPolarity.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D56AEBB920831497001926A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D56AEBD520831520001926A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D56AEBBE20831497001926A9 /* TeenKeyboard */,
+				D56AEBD920831520001926A9 /* Keyboard */,
 				D56AEBBD20831497001926A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				D56AEBBC20831497001926A9 /* TeenKeyboard.app */,
+				D56AEBD820831520001926A9 /* Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +110,17 @@
 			path = TeenKeyboard;
 			sourceTree = "<group>";
 		};
+		D56AEBD920831520001926A9 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D56AEBDA20831520001926A9 /* KeyboardViewController.swift */,
+				D56AEBE620833D8D001926A9 /* SentimentPolarity.mlmodel */,
+				D56AEBDC20831520001926A9 /* Info.plist */,
+				D56AEBE420831561001926A9 /* KeyboardView.xib */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +131,34 @@
 				D56AEBB820831497001926A9 /* Sources */,
 				D56AEBB920831497001926A9 /* Frameworks */,
 				D56AEBBA20831497001926A9 /* Resources */,
+				D56AEBE320831520001926A9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D56AEBDE20831520001926A9 /* PBXTargetDependency */,
 			);
 			name = TeenKeyboard;
 			productName = TeenKeyboard;
 			productReference = D56AEBBC20831497001926A9 /* TeenKeyboard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D56AEBD720831520001926A9 /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56AEBE020831520001926A9 /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				D56AEBD420831520001926A9 /* Sources */,
+				D56AEBD520831520001926A9 /* Frameworks */,
+				D56AEBD620831520001926A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = D56AEBD820831520001926A9 /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +171,9 @@
 				ORGANIZATIONNAME = "Shashank Venkatramani";
 				TargetAttributes = {
 					D56AEBBB20831497001926A9 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					D56AEBD720831520001926A9 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -116,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				D56AEBBB20831497001926A9 /* TeenKeyboard */,
+				D56AEBD720831520001926A9 /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +208,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D56AEBD620831520001926A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56AEBE520831561001926A9 /* KeyboardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,13 +223,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56AEBE720833D8E001926A9 /* SentimentPolarity.mlmodel in Sources */,
 				D56AEBC220831497001926A9 /* ViewController.swift in Sources */,
 				D56AEBC820831497001926A9 /* TeenKeyboard.xcdatamodeld in Sources */,
 				D56AEBC020831497001926A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D56AEBD420831520001926A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56AEBE820833D8E001926A9 /* SentimentPolarity.mlmodel in Sources */,
+				D56AEBDB20831520001926A9 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D56AEBDE20831520001926A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56AEBD720831520001926A9 /* Keyboard */;
+			targetProxy = D56AEBDD20831520001926A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D56AEBC320831497001926A9 /* Main.storyboard */ = {
@@ -283,6 +386,7 @@
 		D56AEBD220831498001926A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PPV34QEJT;
@@ -301,6 +405,7 @@
 		D56AEBD320831498001926A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PPV34QEJT;
@@ -311,6 +416,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xXShankyXx.TeenKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D56AEBE120831520001926A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PPV34QEJT;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xXShankyXx.TeenKeyboard.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D56AEBE220831520001926A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PPV34QEJT;
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xXShankyXx.TeenKeyboard.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +478,15 @@
 			buildConfigurations = (
 				D56AEBD220831498001926A9 /* Debug */,
 				D56AEBD320831498001926A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56AEBE020831520001926A9 /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D56AEBE120831520001926A9 /* Debug */,
+				D56AEBE220831520001926A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
