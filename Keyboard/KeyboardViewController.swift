@@ -133,7 +133,7 @@ class KeyboardViewController: UIInputViewController {
     }
     @IBAction func m(_ sender: Any) {
         proxy?.insertText("m")
-        totalText = totalText! + "n"
+        totalText = totalText! + "m"
     }
     @IBAction func del(_ sender: Any) {
         proxy?.deleteBackward()
@@ -151,16 +151,20 @@ class KeyboardViewController: UIInputViewController {
         
         print(totalText)
         
-        if(makePrediction(textUse: totalText!) == true){
+       if((totalText! == "i wanna kill myself") || (totalText! == "suicide")) {
+            label?.text = "Please head towards our app"
+        } else if(makePrediction(textUse: totalText!) == true){
             proxy?.insertText("\n")
             totalText = ""
             print("positive")
-        } else {
-            
-            
+        }
+        else {
             
             label?.text = "Are you sure you want to send this?"
+            
             overideable = true
+            
+            
         }
         totalText = ""
         
@@ -279,5 +283,5 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton?.setTitleColor(textColor, for: [])
     }
-
+    
 }
