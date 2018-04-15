@@ -4,12 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Keyboard">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController">
             <connections>
                 <outlet property="nextKeyboardButton" destination="uMJ-ha-YUA" id="GqS-5q-8T5"/>
             </connections>
@@ -333,13 +334,14 @@
             </subviews>
             <color key="backgroundColor" red="0.79607843137254897" green="1" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VY2-hM-kUm" secondAttribute="trailing" id="3Gd-vb-kTk"/>
-                <constraint firstItem="VY2-hM-kUm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Bne-W2-Acy"/>
-                <constraint firstItem="VY2-hM-kUm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Nu6-7f-Ah3"/>
+                <constraint firstItem="VY2-hM-kUm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9fe-Ny-82k"/>
+                <constraint firstItem="VY2-hM-kUm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="oDA-Zh-YYe"/>
+                <constraint firstItem="VY2-hM-kUm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vOK-XI-t0g"/>
+                <constraint firstItem="VY2-hM-kUm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vfb-IS-dZD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-31" y="54"/>
+            <point key="canvasLocation" x="-52" y="-32"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6d-hg-ALK">
             <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
