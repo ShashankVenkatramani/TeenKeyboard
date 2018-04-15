@@ -13,10 +13,18 @@ import CoreML
 
 class KeyboardViewController: UIInputViewController {
     var totalText:String? = ""
+    var overideable:Bool = false
     
     private let model = SentimentPolarity()
     
+    @IBOutlet weak var label: UILabel!
     
+    
+    @IBAction func override(_ sender: Any) {
+        if(overideable == true){
+            proxy?.insertText("\n")
+        }
+    }
     @IBOutlet var nextKeyboardButton: UIButton?
     
     @IBAction func q(_ sender: Any) {
@@ -149,11 +157,10 @@ class KeyboardViewController: UIInputViewController {
             print("positive")
         } else {
             
-            for char in totalText! {
-                proxy?.deleteBackward()
-            }
             
-            totalText = ""
+            
+            label?.text = "Are you sure you want to send this?"
+            overideable = true
         }
         totalText = ""
         
@@ -227,6 +234,7 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        label?.text = ""
         proxy = textDocumentProxy as UITextDocumentProxy?
        
         nextKeyboardButton?.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), for: .touchUpInside)
